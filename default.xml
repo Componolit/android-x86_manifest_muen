@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="muen"
+           fetch="https://git.codelabs.ch/git/muen" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
   <remote  name="x86"
@@ -14,7 +16,7 @@
   <project path="build" name="platform/build" groups="pdk,tradefed" remote="x86" revision="nougat-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.9" />
+  <project path="kernel" name="linux.git" remote="muen" revision="v4.14" />
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="nougat-x86" />
