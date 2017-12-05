@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="componolit"
+           fetch="https://github.com/Componolit" />
   <remote  name="aosp"
            fetch="https://android.googlesource.com/" />
   <remote  name="x86"
@@ -17,7 +19,7 @@
   <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.9" />
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="nougat-x86" />
-  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="nougat-x86" />
+  <project path="bootable/newinstaller" name="android-x86_bootable_newinstaller" remote="componolit" revision="nougat-x86" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="device/generic/firmware" name="device/generic/firmware" remote="x86" revision="nougat-x86" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="nougat-x86" />
