@@ -12,18 +12,21 @@
            sync-c="true"
            sync-j="1" />
 
-  <!-- from x86 port repositories -->
-  <project path="build" name="platform/build" groups="pdk,tradefed" remote="x86" revision="nougat-x86" >
+  <!-- from componolit port repositories -->
+  <project path="build" name="platform/build" groups="pdk,tradefed" remote="componolit" revision="nougat-x86" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="bootable/newinstaller" name="android-x86_bootable_newinstaller" remote="componolit" revision="nougat-x86" />
+  <project path="device/generic/common" name="android-x86_device_generic_common" groups="pdk" remote="componolit" revision="nougat-x86" />
+  <project path="device/generic/x86_64" name="android-x86_device_generic_x86_64" groups="pdk" remote="componolit" revision="nougat-x86" />
+  <project path="system/core" name="android-x86_platform_system_core" groups="pdk" remote="componolit" revision="nougat-x86" />
+
+  <!-- from x86 port repositories -->
   <project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.9" />
   <project path="art" name="platform/art" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="bionic" name="platform/bionic" groups="pdk" remote="x86" revision="nougat-x86" />
-  <project path="bootable/newinstaller" name="android-x86_bootable_newinstaller" remote="componolit" revision="nougat-x86" />
-  <project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="device/generic/firmware" name="device/generic/firmware" remote="x86" revision="nougat-x86" />
   <project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" revision="nougat-x86" />
-  <project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="nougat-x86" />
   <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="nougat-x86" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="x86" revision="nougat-x86" />
@@ -75,7 +78,6 @@
   <project path="packages/apps/Taskbar" name="platform/packages/apps/Taskbar" remote="x86" revision="nougat-x86" />
   <project path="packages/services/Analytics" name="platform/packages/services/Analytics" remote="x86" revision="nougat-x86" />
   <project path="system/bt" name="platform/system/bt" groups="pdk" remote="x86" revision="nougat-x86" />
-  <project path="system/core" name="platform/system/core" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="system/media" name="platform/system/media" groups="pdk" remote="x86" revision="nougat-x86" />
   <project path="system/netd" name="platform/system/netd" groups="pdk" remote="x86" revision="nougat-x86" />
